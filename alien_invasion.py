@@ -17,12 +17,10 @@ def run_game():
 
   # Start the main loop for the game.
   while True:
-    # Watch for keyboard and mouse events.
-    game_fns.check_events()
+    game_fns.check_events(ship)
+    ship.update()
+    game_fns.update_screen(ai_settings, screen, ship)
 
-    # Redraw the screen during each pass through the loop
-    game_fns.update_screen()
-    
     # Make the most recently drawn screen visible.
     pygame.display.flip()
 
