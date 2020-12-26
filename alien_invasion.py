@@ -21,9 +21,8 @@ def run_game():
     game_fns.check_events()
 
     # Redraw the screen during each pass through the loop
-    screen.fill(ai_settings.bg_color)
-    ship.blitme() 
-
+    game_fns.update_screen()
+    
     # Make the most recently drawn screen visible.
     pygame.display.flip()
 
